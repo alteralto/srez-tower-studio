@@ -1,0 +1,9 @@
+{
+  "name": "srez-tower-studio",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Parametric residential tower studio with an architectural chat assistant",
+  "author": "Alexey Tkachenko",
+  "engines": {"node": ">=20.19"},
+  "scripts": {"build": "node scripts/build.cjs", "start": "node server.cjs", "test": "node --test tests/studio.test.cjs"}
+}
