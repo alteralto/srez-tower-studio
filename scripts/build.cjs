@@ -3,7 +3,7 @@ const root=path.resolve(__dirname,'..'),read=name=>fs.readFileSync(path.join(roo
 function build(){
  let html=read('template.html').replace('/*ENGINE*/',()=>read('engine.js')).replace('/*APP*/',()=>read('app.js'));
  html=html.replace('</style>',()=>read('chat.css')+'\n</style>');
- html=html.replace('<button class="btn" id="print">','<button class="btn" id="openChat">Чат о проекте</button><button class="btn" id="print">');
+ html=html.replace('<button class="btn" id="print">','<button class="btn" id="headerJson">Скачать JSON</button><button class="btn" id="openChat">Чат о проекте</button><button class="btn" id="print">');
  html=html.replace('<section class="details">',()=>read('chat.html')+'\n<section class="details">');
  html=html.replace('</body>',()=>'<script>'+read('chat.js')+'</script></body>');
  html=html.replace(/\r\n?/g,'\n');
