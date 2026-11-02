@@ -2,7 +2,7 @@
 
 Параметрический инструмент для генерации массинга жилой башни. Учебный проект ПИК × МФТИ, задание 3.
 
-[Открыть инструмент](https://alteralto.github.io/srez-tower-studio/) · [Проект в PDF](examples/tower-project.pdf) · [3D-модель](examples/tower.glb)
+[Открыть студию с чатом](https://srez-tower-studio.vercel.app/) · [GitHub Pages](https://alteralto.github.io/srez-tower-studio/) · [Проект в PDF](examples/tower-project.pdf) · [3D-модель](examples/tower.glb)
 
 ![Жилая башня «Срез»](examples/tower-perspective.png)
 
