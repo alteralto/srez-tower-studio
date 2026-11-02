@@ -1,0 +1,9 @@
+(()=>{
+ const side=document.querySelector('aside.right'),assistant=$('assistant'),metrics=document.createElement('div'),tabs=document.createElement('div');
+ metrics.id='metricsPane';while(side.firstChild)metrics.append(side.firstChild);tabs.className='side-tabs';
+ const metricsTab=document.createElement('button'),chatTab=document.createElement('button');metricsTab.textContent='Показатели';chatTab.textContent='Чат / форма';metricsTab.className='active';tabs.append(metricsTab,chatTab);side.append(tabs,metrics,assistant);assistant.hidden=true;
+ function show(chat){assistant.hidden=!chat;metrics.hidden=chat;metricsTab.classList.toggle('active',!chat);chatTab.classList.toggle('active',chat)}
+ metricsTab.onclick=()=>show(false);chatTab.onclick=()=>{show(true);$('chatInput').focus()};$('openChat').onclick=()=>{show(true);$('chatInput').focus();if(innerWidth<1100)side.scrollIntoView({behavior:'smooth'})};
+ document.querySelectorAll('[data-form]').forEach(b=>b.onclick=()=>{params={...params,twist:0,taper:0,leanX:0,leanY:0,steps:0,roundness:0,rotation:0,setback:0,stepDepth:.6};if(b.dataset.form==='twist'){params.twist=75;params.taper=.12}if(b.dataset.form==='steps'){params.steps=3;params.stepDepth=.9;params.taper=.05}if(b.dataset.form==='oval'){params.roundness=1;params.taper=.16;params.leanX=3}refresh();setStatus('Форма обновлена')});
+ const chips=document.querySelector('.chat-suggestions');const prompts=[['Закрутить верх','Закрути башню на 75 градусов и сузь верх на 12%. Сохрани этажность.'],['Каскадные уступы','Сделай башню с тремя каскадными уступами глубиной 0.9 м. Сохрани 25 этажей.'],['Овальная башня','Сделай овальную башню со скруглением 100%, сужением кверху 15% и наклоном вершины на 3 м по X.']];chips.replaceChildren();for(const [label,prompt]of prompts){let b=document.createElement('button');b.textContent=label;b.onclick=()=>{$('chatInput').value=prompt;$('chatInput').focus()};chips.append(b)}
+})();

@@ -5,5 +5,5 @@
   "description": "Parametric residential tower studio with an architectural chat assistant",
   "author": "Alexey Tkachenko",
   "engines": {"node": ">=20.19"},
-  "scripts": {"build": "node scripts/build.cjs", "start": "node server.cjs", "test": "node --test tests/studio.test.cjs tests/cloud.test.cjs"}
+  "scripts": {"build": "node scripts/build.cjs", "start": "node server.cjs", "test": "node --test tests/studio.test.cjs tests/cloud.test.cjs tests/forms.test.cjs"}
 }

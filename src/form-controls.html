@@ -1,0 +1,13 @@
+<details class="form-controls"><summary>Форма башни</summary>
+<div class="form-presets"><button type="button" data-form="twist">Скрученная</button><button type="button" data-form="steps">Каскадная</button><button type="button" data-form="oval">Овальная</button></div>
+<div class="field"><label for="twist">Скручивание вершины <output id="twistValue"></output></label><input id="twist" type="range" min="-150" max="150" step="1"></div>
+<div class="field"><label for="taper">Сужение кверху <output id="taperValue"></output></label><input id="taper" type="range" min="0" max="0.45" step="0.01"></div>
+<div class="field"><label for="rotation">Поворот башни <output id="rotationValue"></output></label><input id="rotation" type="range" min="-180" max="180" step="1"></div>
+<div class="field"><label for="leanX">Сдвиг вершины X <output id="leanXValue"></output></label><input id="leanX" type="range" min="-12" max="12" step="0.3"></div>
+<div class="field"><label for="leanY">Сдвиг вершины Y <output id="leanYValue"></output></label><input id="leanY" type="range" min="-12" max="12" step="0.3"></div>
+<div class="field"><label for="steps">Каскадные уступы <output id="stepsValue"></output></label><input id="steps" type="range" min="0" max="6" step="1"></div>
+<div class="field"><label for="stepDepth">Глубина уступа <output id="stepDepthValue"></output></label><input id="stepDepth" type="range" min="0" max="1.8" step="0.3"></div>
+<div class="field"><label for="roundness">Скругление контура <output id="roundnessValue"></output></label><input id="roundness" type="range" min="0" max="1" step="0.1"></div>
+<div class="field"><label for="upper">Этажей верхнего уступа <output id="upperValue"></output></label><input id="upper" type="range" min="0" max="20" step="1"></div>
+<p class="hint">Форма пересчитывается по этажам. Скручивание и наклон увеличивают проекцию объёма на землю. Конструктив и квартирные планы для сложных форм требуют разработки.</p>
+</details>
